@@ -56,7 +56,7 @@ export default Component.extend({
       startX: e.pageX
     });
 
-    this.$().closest(TOP_LEVEL_CLASS).addClass('is-resizing');
+    $(this.element).closest(TOP_LEVEL_CLASS).addClass('is-resizing');
   },
 
   _mouseUp(e) {
@@ -71,7 +71,7 @@ export default Component.extend({
       this.set('column.width', width);
 
       this.sendAction('onColumnResized', width);
-      this.$().closest(TOP_LEVEL_CLASS).removeClass('is-resizing');
+      $(this.element).closest(TOP_LEVEL_CLASS).removeClass('is-resizing');
     }
   },
 
@@ -87,7 +87,7 @@ export default Component.extend({
 
       let $column = this.get('$column');
       let $index = this.get('table.visibleColumns').indexOf(this.get('column')) + 1;
-      let $table = this.$().closest(TOP_LEVEL_CLASS);
+      let $table = $(this.element).closest(TOP_LEVEL_CLASS);
 
       $column.outerWidth(width);
       $(`thead td.lt-scaffolding:nth-child(${$index})`, $table).outerWidth(width);

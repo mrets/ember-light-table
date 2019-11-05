@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import { Row, Column } from 'ember-light-table';
@@ -8,7 +9,7 @@ moduleForComponent('light-table/cells/<%= dasherizedModuleName %>', 'Integration
 
 test('it renders', function(assert) {
   this.render(hbs`{{light-table/cells/<%= dasherizedModuleName %>}}`);
-  assert.equal(this.$().text().trim(), '');
+  assert.equal($(this.element).text().trim(), '');
 });
 
 test('it renders value', function(assert) {
@@ -17,5 +18,5 @@ test('it renders value', function(assert) {
 
   this.render(hbs`{{light-table/cells/<%= dasherizedModuleName %> column row rawValue=(get row column.valuePath)}}`);
 
-  assert.equal(this.$().text().trim(), 'bar');
+  assert.equal($(this.element).text().trim(), 'bar');
 });
