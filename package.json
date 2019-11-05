@@ -6,20 +6,20 @@
     "ember-addon",
     "table"
   ],
-  "license": "MIT",
-  "author": "",
-  "homepage": "https://github.com/offirgolan/ember-light-table",
-  "directories": {
-    "doc": "doc",
-    "test": "tests"
-  },
   "repository": {
     "type": "git",
     "url": "http://github.com/offirgolan/ember-light-table.git"
   },
+  "license": "MIT",
+  "author": "",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "homepage": "https://github.com/offirgolan/ember-light-table",
   "scripts": {
     "build": "ember build",
-    "lint:js": "eslint ./*.js addon addon-test-support app blueprints config lib server test-support tests",
+    "lint:js": "eslint .",
     "start": "ember serve",
     "test": "ember test",
     "test:all": "ember try:each"
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "broccoli-asset-rev": "^3.0.0",
-    "ember-cli": "~3.1.4",
+    "ember-cli": "~3.2.0",
     "ember-cli-app-version": "^3.2.0",
     "ember-cli-autoprefixer": "^0.8.1",
     "ember-cli-changelog": "html-next/ember-cli-changelog#v0.4.0-beta.1",
@@ -62,20 +62,21 @@
     "ember-disable-prototype-extensions": "^1.1.2",
     "ember-export-application-global": "^2.0.0",
     "ember-font-awesome": "^4.0.0-rc.4",
-    "ember-load-initializers": "^1.0.0",
+    "ember-load-initializers": "^1.1.0",
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-native-dom-helpers": "^0.6.2",
     "ember-one-way-controls": "^3.0.1",
     "ember-qunit": "^4.0.0",
     "ember-resolver": "^4.5.0",
     "ember-responsive": "^2.0.5",
-    "ember-source": "~3.1.0",
+    "ember-source": "~3.2.0",
     "ember-source-channel-url": "^1.0.1",
     "ember-try": "^0.2.23",
     "eslint-plugin-ember": "^5.0.0",
     "eslint-plugin-ember-suave": "^1.0.0",
     "eslint-plugin-node": "^6.0.1",
     "loader.js": "^4.6.0",
+    "qunit-dom": "^0.6.2",
     "yuidoc-ember-theme": "^2.0.1"
   },
   "resolutions": {
@@ -83,7 +84,7 @@
     "ip-regex": "^2.1.0"
   },
   "engines": {
-    "node": "^4.5 || 6.* || >= 7.*"
+    "node": "6.* || 8.* || >= 10.*"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
