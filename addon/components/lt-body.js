@@ -489,7 +489,9 @@ export default Component.extend({
         toggleExpandedRow();
       }
 
-      this.get('onRowClick')(...arguments);
+      if (this.onRowClick) {
+        this.onRowClick(...arguments);
+      }
     },
 
     /**

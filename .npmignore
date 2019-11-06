@@ -20,6 +20,7 @@
 /config/release.js
 /tests/
 **/.gitkeep
+/CONTRIBUTING.md
 /ember-cli-build.js
 /testem.js
 /yarn.lock
