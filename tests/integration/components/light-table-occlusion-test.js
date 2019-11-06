@@ -164,7 +164,7 @@ module('Integration | Component | light table | occlusion', function(hooks) {
       current: null,
       isActive: computed('row.content', 'current', function() {
         return this.get('row.content') === this.get('current');
-      })
+      }).readOnly()
     }));
 
     let users = this.server.createList('user', 3);
